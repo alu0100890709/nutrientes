@@ -26,4 +26,37 @@ RSpec.describe Alimento do
 
 
   end
+
+ describe "# Existencia de las cantidades de los macronutrientes del alimento en gramos." do
+
+    it "proteınas del alimento en gramos." do
+
+
+      expect(@huevo.prt).to eq(14.1)
+      expect(@leche.prt).to eq(3.3)
+
+
+
+    end
+
+     it "glucido del alimento en gramos." do
+
+
+      expect(@huevo.gl).to eq(0.0)
+      expect(@leche.gl).to eq(4.8)
+
+      
+    end
+  
+      it "lipido del alimento en gramos." do
+
+
+      expect(@huevo.lp).to eq(19.5)
+      expect(@leche.lp).to eq(3.2)
+
+      
+     end
+
+  end
+
 end
