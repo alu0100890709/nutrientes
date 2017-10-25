@@ -38,5 +38,10 @@ def valor_energetico
     
    ( @prt * 4) + (@gl * 4) +(@lp * 9)
     
-end  
+end
+   def to_s
+
+    "(#{@nombre}: #{@prt} g de proteina,#{@gl} g de glúcido,#{@lp} g de lipidos )"
+
+  end  
 end
