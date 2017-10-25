@@ -104,6 +104,16 @@ RSpec.describe Alimento do
     end
 
   end
+ describe "# Obtener alimento formateado " do
 
+    it "formateo del alimento" do
+
+        expect(Alimento.new("pera",10,10,10).to_s).to eq("pera: 10 g de proteina, 10 g de glúcido, 10 g de lipido")
+        
+        expect(@leche.to_s).to eq("Leche: 3.3 g de proteina, 4.8 g de glúcido, 3.2 g de lipido")
+
+    end
+
+  end
 
 end
