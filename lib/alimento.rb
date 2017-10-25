@@ -17,4 +17,21 @@ attr_accessor :nombre,:prt,:gli,:lp
 @lp = lipido
 
   end
+
+    def get_prt
+      @prt
+  end 
+  
+  def get_nombre
+      @nombre
+  end
+  
+    def get_lp
+      @lp
+  end 
+  
+    def get_gl
+      @gl
+  end 
+  
 end
