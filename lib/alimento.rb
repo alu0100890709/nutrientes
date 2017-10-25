@@ -33,5 +33,10 @@ attr_accessor :nombre,:prt,:gli,:lp
     def get_gl
       @gl
   end 
-  
+
+def valor_energetico
+    
+   ( @prt * 4) + (@gl * 4) +(@lp * 9)
+    
+end  
 end
