@@ -59,4 +59,31 @@ RSpec.describe Alimento do
 
   end
 
+  describe "# Obtención de atributos del alimento por un método" do
+
+    it "Obtencion del nombre correctamente" do
+
+             expect(@huevo.get_nombre).to eq("Huevo Frito")
+
+    end
+    
+     it "proteina" do
+         
+             expect(@huevo.get_prt).to eq(14.1)
+         
+    end
+    
+     it "glucido" do
+          expect(@huevo.get_gl).to eq(0.0)
+         
+    end
+    
+     it "lipido" do
+         
+                  expect(@huevo.get_lp).to eq(19.5)
+    end
+    
+  end
+
+
 end
