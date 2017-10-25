@@ -85,5 +85,25 @@ RSpec.describe Alimento do
     
   end
 
+  describe "# Obtener valor energético gracias a un método " do
+
+    it "valor_energ = alimento.prt * 4 + alimento.gl * 4 + alimento.lp * 9" do
+        
+        
+        ###### HUEVO
+
+
+      expect(@huevo.valor_energetico).to eq(231.9)
+      
+       ###### LECHE
+
+      expect(@leche.valor_energetico).to eq(61.2)
+      
+
+
+    end
+
+  end
+
 
 end
