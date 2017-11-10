@@ -1,3 +1,4 @@
+
 require "spec_helper"
 require 'lib/alimento'
 
@@ -25,11 +26,33 @@ RSpec.describe Alimento do
 
 
 
+require "spec_helper"
+require 'lib/point'
+
+
+
+describe Alimento do
+
+  before :each do
+
+    @huevo = Alimento.new('Huevo Frito',14.1,0.0,19.5)
+    @leche = Alimento.new('Leche',3.3,4.8,3.2)
+
+
+  end    
+
+    
+
+
   describe "# Existencia del nombre del alimento" do
 
     it "Se almacena correctamente los nombres de alimento" do
 
+
       expect(@huevo.nombre).to eq('Huevo Frito')
+
+      expect(@huevo.nombre).to eq('Huevo Frito') 
+
       expect(@leche.nombre).to eq('Leche')
 
 
@@ -38,7 +61,13 @@ RSpec.describe Alimento do
 
   end
 
+
  describe "# Existencia de las cantidades de los macronutrientes del alimento en gramos." do
+=======
+
+
+  describe "# Existencia de las cantidades de los macronutrientes del alimento en gramos." do
+
 
     it "proteınas del alimento en gramos." do
 
@@ -96,6 +125,19 @@ RSpec.describe Alimento do
     
   end
 
+
+ describe "# Obtener alimento formateado " do
+
+    it "formateo del alimento" do
+
+        expect(Alimento.new("pera",10,10,10).to_s).to eq("pera: 10 g de proteina, 10 g de glúcido, 10 g de lipido")
+        
+        expect(@leche.to_s).to eq("Leche: 3.3 g de proteina, 4.8 g de glúcido, 3.2 g de lipido")
+
+    end
+
+  end
+
   describe "# Obtener valor energético gracias a un método " do
 
     it "valor_energ = alimento.prt * 4 + alimento.gl * 4 + alimento.lp * 9" do
@@ -115,6 +157,7 @@ RSpec.describe Alimento do
     end
 
   end
+
  describe "# Obtener alimento formateado " do
 
     it "formateo del alimento" do
@@ -136,3 +179,9 @@ describe "# Obtener clase del objeto " do
     end
 
   end
+
+
+
+
+end
+
