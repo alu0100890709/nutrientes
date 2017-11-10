@@ -2,6 +2,7 @@
 
 
 
+<<<<<<< HEAD
 
 class Grupo
   
@@ -50,6 +51,16 @@ class Alimento < Grupo
  def initialize(nombre,proteina,glucido,lipido,carnes,pescado,lacteos,al_graso,al_carbohidratos,verduras, frutas, bebidas)
     
 super(carnes,pescado,lacteos,al_graso,al_carbohidratos,verduras, frutas, bebidas)
+=======
+class Alimento
+
+
+ 
+attr_accessor :nombre,:prt,:gli,:lp
+
+ def initialize(nombre,proteina,glucido,lipido)
+    
+>>>>>>> 945a683492e440e3f4d70eddffdb0e642fe116dc
 
 @nombre = nombre
 @prt =proteina
@@ -59,6 +70,7 @@ super(carnes,pescado,lacteos,al_graso,al_carbohidratos,verduras, frutas, bebidas
   end
   
    def to_s
+<<<<<<< HEAD
    
 
     s = "( "
@@ -71,6 +83,12 @@ super(carnes,pescado,lacteos,al_graso,al_carbohidratos,verduras, frutas, bebidas
 
   end
 
+=======
+
+    "(#{@nombre}: #{@prt} g de proteina,#{@gl} g de glúcido,#{@lp} g de lipidos )"
+
+  end
+>>>>>>> 945a683492e440e3f4d70eddffdb0e642fe116dc
   
     def get_prt
       @prt
@@ -96,4 +114,7 @@ def valor_energetico
 end
 
 end
+<<<<<<< HEAD
 
+=======
+>>>>>>> 945a683492e440e3f4d70eddffdb0e642fe116dc

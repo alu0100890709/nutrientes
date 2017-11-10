@@ -9,9 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Marco Antonio Maestre Mirabal"]
   spec.email         = ["alu0100890709@ull.edu.es"]
 
+<<<<<<< HEAD
   spec.summary       = %q{Write a short summary, because Rubygems requires one.}
   spec.description   = %q{ Write a longer description or delete this line.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+=======
+  spec.summary       = %q{Práctica de Laboratorio #6. Desarrollo Dirigido por Pruebas (TDD)..}
+  spec.description   = %q{Practica sobre el Desarrollo Dirigido por Pruebas  para la clase Alimento.}
+  spec.homepage      = "https://github.com/ULL-ESIT-LPP-1718/tdd-alu0100890709"
+>>>>>>> 945a683492e440e3f4d70eddffdb0e642fe116dc
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
