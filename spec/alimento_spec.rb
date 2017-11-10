@@ -6,8 +6,19 @@ RSpec.describe Alimento do
 
   before :each do
 
-    @huevo = Alimento.new('Huevo Frito',14.1,0.0,19.5)
-    @leche = Alimento.new('Leche',3.3,4.8,3.2)
+        @huevo = Alimento.new('Huevo Frito',14.1,0.0,19.5,0,0,1,0,0,0,0,0)
+     @leche = Alimento.new('Leche',3.3,4.8,3.2,0,0,1,0,0,0,0,0)
+    @cerdo = Alimento.new('Cerdo',21.5,0.0,6.3,1,0,0,0,0,0,0,0)
+
+    @bacalao = Alimento.new('Bacalao',17.7,0.0,0.4,0,1,0,0,0,0,0,0)
+
+    @aceite = Alimento.new('Aceite',0.0,0.2,99.6,0,0,0,1,0,0,0,0)
+
+    @azucar = Alimento.new('Azúcar',0.0,99.8,0.0,0,0,0,0,1,0,0,0)
+
+    @tomate = Alimento.new('Tomate',1.0,3.5,0.2,0,0,0,0,0,1,0,0)
+
+    @platano = Alimento.new('Plátano',1.2,21.4,0.2,0,0,0,0,0,0,1,0)
 
 
   end
@@ -116,4 +127,12 @@ RSpec.describe Alimento do
 
   end
 
-end
+describe "# Obtener clase del objeto " do
+
+    it "Clase de objeto" do
+
+       
+        expect(@leche.class).to eq("Alimento")
+    end
+
+  end
