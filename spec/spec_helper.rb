@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "pr06"
+require "alimento_spec.rb"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
