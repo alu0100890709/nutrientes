@@ -2,15 +2,14 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "pr06/version"
-
 Gem::Specification.new do |spec|
   spec.name          = "pr06"
   spec.version       = Pr06::VERSION
-  spec.authors       = ["Marco Antonio Maestre Mirabal"]
+ spec.authors       = ["Marco Antonio Maestre Mirabal"]
   spec.email         = ["alu0100890709@ull.edu.es"]
 
 <<<<<<< HEAD
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
+ spec.summary       = %q{Write a short summary, because Rubygems requires one.}
   spec.description   = %q{ Write a longer description or delete this line.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 =======
