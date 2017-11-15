@@ -2,7 +2,12 @@ require "spec_helper"
 
 
 
-describe Alimento do
+Rspec.describe Alimento do
+ it "has a version number" do
+
+    expect(Alimento::VERSION).not_to be nil
+
+  end
 
   before :each do
     @huevo = Alimento.new('Huevo Frito',14.1,0.0,19.5,0,0,1,0,0,0,0,0)
