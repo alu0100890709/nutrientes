@@ -7,7 +7,7 @@ describe Lista do
    
     
     @l1 = Lista.new
-
+    @l2 = Lista.new
 
   end    
 describe "# Observar valor del nodo y nodo anterior y posterior a los que apunta " do
@@ -35,7 +35,7 @@ it "comprobrando el metodo any?" do
 
       expect(@l1.any?).to eq(true)
 end
-t "comprobrando max" do
+it "comprobrando max" do
 
       expect(@l1.max).to eq(1)
 
