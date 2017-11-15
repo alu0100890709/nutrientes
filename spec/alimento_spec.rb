@@ -1,8 +1,12 @@
 require "spec_helper"
-require 'lib/alimento'
+
 
 
 RSpec.describe Alimento do
+
+  it "has a version number" do
+    expect(Alimento::VERSION).not_to be nil
+  end
 
   before :each do
 
@@ -130,9 +134,30 @@ RSpec.describe Alimento do
 describe "# Obtener clase del objeto " do
 
     it "Clase de objeto" do
-
+          
        
-        expect(@leche.class).to eq("Alimento")
+        expect(@leche.class).to be_a_kind_of(Alimento)
     end
 
+  end
+
+describe "# Obtener jerarquia del objeto " do
+
+    it "jerarquia de objeto" do
+
+       
+        expect(@leche.lacteos).to be_a_kind_of(Grupo)
+    end
+
+  end
+  
+  describe "# Comparar atributos de alimentos " do
+
+    it "comprobar proteina" do
+
+        expect(@leche < @huevo).to be(true)
+    end
+
+  end
+  
   end
