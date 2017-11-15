@@ -7,7 +7,7 @@ describe Lista do
    
     
     @l1 = Lista.new
-
+    @l2 = Lista.new
 
   end    
 describe "# Observar valor del nodo y nodo anterior y posterior a los que apunta " do
