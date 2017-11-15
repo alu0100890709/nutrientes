@@ -35,7 +35,7 @@ it "comprobrando el metodo any?" do
 
       expect(@l1.any?).to eq(true)
 end
-t "comprobrando max" do
+it "comprobrando max" do
 
       expect(@l1.max).to eq(1)
 
