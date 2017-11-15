@@ -30,4 +30,10 @@ describe "# Observar que existe una Lista con su cabeza y su cola  " do
 
     end
 end
+describe "# haciendo el punto enumerable" do
+it "comprobrando el metodo any?" do
+
+      expect(@p1.any?).to eq(true)
+end
+
 end
