@@ -5,7 +5,7 @@
 
 class Grupo
   
- 
+include Comparable 
 
 attr_accessor :carnes,:pescado,:lacteos,:al_graso,:al_carbohidratos,:verduras, :frutas, :bebidas
   def initialize(carnes,pescado,lacteos,al_graso,al_carbohidratos,verduras, frutas, bebidas)
@@ -94,6 +94,18 @@ def valor_energetico
    ( @prt * 4) + (@gl * 4) +(@lp * 9)
     
 end
+
+
+def <=>(other)
+
+    #return nil unless other.instance_of? Point
+
+   # @prt <=> other.gl
+    #@gl <=> other.gl
+  #  @lp <=> other.lp
+    @valor_energ=other.valor_energ
+    
+  end
 
 end
 
