@@ -10,8 +10,10 @@ RSpec.describe Alimento do
 
   before :each do
 
-        @huevo = Alimento.new('Huevo Frito',14.1,0.0,19.5,0,0,1,0,0,0,0,0)
-     @leche = Alimento.new('Leche',3.3,4.8,3.2,0,0,1,0,0,0,0,0)
+    @huevo = Alimento.new('Huevo Frito',14.1,0.0,19.5,0,0,1,0,0,0,0,0)
+   
+    @leche = Alimento.new('Leche',3.3,4.8,3.2,0,0,1,0,0,0,0,0)
+   
     @cerdo = Alimento.new('Cerdo',21.5,0.0,6.3,1,0,0,0,0,0,0,0)
 
     @bacalao = Alimento.new('Bacalao',17.7,0.0,0.4,0,1,0,0,0,0,0,0)
