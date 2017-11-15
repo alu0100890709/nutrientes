@@ -155,11 +155,19 @@ describe "# Obtener jerarquia del objeto " do
   
   describe "# Comparar atributos de alimentos " do
 
-    it "comprobar proteina" do
+    it "comprobar valore <" do
 
         expect(@leche < @huevo).to be(true)
     end
 
+    it "comprobar valores ==" do
+
+        expect(@leche == @cerdo).to be(true)
+    end
+    it "comprobar valores >=" do
+
+        expect(@leche >= @aceite).to be(true)
+    end
   end
   
   end

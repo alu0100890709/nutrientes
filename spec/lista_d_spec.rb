@@ -33,7 +33,17 @@ end
 describe "# haciendo el punto enumerable" do
 it "comprobrando el metodo any?" do
 
-      expect(@p1.any?).to eq(true)
+      expect(@l1.any?).to eq(true)
 end
+t "comprobrando max" do
 
+      expect(@l1.max).to eq(1)
+
+    end
+    it "comprobrando el metodo all? con un bloque vacio" do
+
+      expect(@l2.all?).to eq(true)
+
+     
+    end
 end
