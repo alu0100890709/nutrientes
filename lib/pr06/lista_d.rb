@@ -59,7 +59,9 @@ class Lista
       def each
 
     yield @head
-    yield @tail
+    if n != nil
+	yield n.value
+	end
 
   end
 
