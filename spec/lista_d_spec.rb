@@ -10,7 +10,7 @@ describe Lista do
     @l2 = Lista.new
 
   end    
-describe "# Observar valor del nodo y nodo anterior y posterior a los que apunta " do
+  describe "# Observar valor del nodo y nodo anterior y posterior a los que apunta " do
 
     it " Existir un Nodo de la lista con sus datos, su siguiente y su previo nodo" do
 
@@ -21,7 +21,7 @@ describe "# Observar valor del nodo y nodo anterior y posterior a los que apunta
 
   end
   
-describe "# Observar que existe una Lista con su cabeza y su cola  " do
+ describe "# Observar que existe una Lista con su cabeza y su cola  " do
 
     it " existir una Lista  " do
 
@@ -29,13 +29,13 @@ describe "# Observar que existe una Lista con su cabeza y su cola  " do
         expect(@l1).to not_be_eq(nil)
 
     end
-end
-describe "# haciendo el punto enumerable" do
-it "comprobrando el metodo any?" do
+  end
+ describe "# haciendo el punto enumerable" do
+    it "comprobrando el metodo any?" do
 
       expect(@l1.any?).to eq(true)
-end
-it "comprobrando max" do
+  end
+    it "comprobrando max" do
 
       expect(@l1.max).to eq(1)
 
@@ -46,4 +46,5 @@ it "comprobrando max" do
 
      
     end
+ end
 end
