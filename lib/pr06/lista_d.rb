@@ -1,70 +1,101 @@
- create a Struct with :value, :next and :prev
+# Representación de un nodo en una lista
 
 Node = Struct.new(:value, :next, :prev)
-  
 
-
+# Representación de una lista doblemente enlazada de nodos
 
 class Lista
-
-	include Enumerable
-    attr_reader :head,:tail
-    def initialize
-        @head=nil
-        @tail=nil
-    end
-
+    include Enumerable
+    attr_reader :head, :tail
     
-    def insert(value)
-     if head ==nil
-         head.Node.new(value,nil,nil)
-         lista.push head
-    else 
-        lista.push value
-    end
-    end
-    
-        def insert_many(v1,v2,v3)
-     if head ==nil
-         head.Node.new(v1,nil,nil)
-         @n1.Node.new(v2,nil,head)
-         @n2.Node.new(v3,nil,@n1)
-         lista.push head
-          lista.push @n1
-           lista.push @n2
-         
-    else 
-        lista.push v1
-         lista.push v2
-          lista.push v3
-    end
+    # Inserción por la cabeza de la lista
+    # @param [any] x valor del nuevo nodo
+    #
+    # @return [Node] Devuelve el head
+    def push_head(x)
+        if(@head == nil)
+            @head = Node.new(x, nil, nil)
+            @tail = @head
+        else
+            nuevo = Node.new(x, nil, nil)
+            nuevo.next= @head
+            @head.prev = nuevo
+            @head = nuevo
+        end
     end
     
-     
-    def extract_head
-     if head ==nil
-      puts "No hay nada que extraer"
-    else 
-        lista.pop head
-    end
+    # Inserción por la cola de la lista
+    # @param [any] x valor del nuevo nodo
+    #
+    # @return [Node] Devuelve el tail
+    def push_tail(x)
+        if(@tail == nil)
+            @tail = Node.new(x, nil, nil)
+            @head = @tail
+        else
+            nuevo = Node.new(x, nil, nil)
+            nuevo.prev = @tail
+            @tail.next = nuevo
+            @tail = nuevo
+        end
     end
     
-      def extract_tail
-     if head ==nil
-      puts "No hay nada que extraer"
-    else 
-        lista.pop tail
+    # Inserción por la cola de la lista de varios nodos
+    # @param [Array<any>] x valores de los nuevos nodos
+    #
+    # @return [Node] Devuelve el tail
+    def push(x)
+        x.each{
+            |i| push_tail(i)
+        }
     end
-	end
-      def each
-	if n==nil
-
-    yield @head 
-    else 
-	yield n.value
-	end
-
-  end
-
     
+    # Extracción del primer nodo de la lista
+    #
+    # @return [any, nil] devuelve el valor guardado en el primer nodo o nil si no hay nodos en la lista
+    def pop_head()
+        if(@head == nil)
+            return nil
+        end
+        
+        x = @head
+        @head = @head.next
+        if(@head == nil)
+            @tail = nil
+        else
+            @head.prev = nil
+            x.next = nil
+        end
+        x.value
+    end
+    
+    # Extracción del último nodo de la lista
+    #
+    # @return [any, nil] devuelve el valor guardado en el último nodo o nil si no hay nodos en la lista
+    def pop_tail()
+        if(@tail == nil)
+            return nil
+        end
+        
+        x = @tail
+        @tail = @tail.prev
+        if(@tail == nil)
+            @head = nil
+        else
+            @tail.next = nil
+            x.prev = nil
+        end
+        x.value
+    end
+    
+    # Método para la enumeración de los nodos de la lista
+    #
+    # @return [Node] devuelve los nodos que conforman la lista
+    def each
+        x = @head
+        while(x != nil)
+            yield x.value
+            x = x.next
+        end
+    end
 end
