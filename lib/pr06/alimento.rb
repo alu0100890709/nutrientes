@@ -49,7 +49,7 @@ class Alimento < Grupo
 
 
 
-attr_accessor :nombre,:prt,:gli,:lp,:ind_gluc
+attr_accessor :nombre,:prt,:gli,:lp,:ind_gluc,:valor_energ
 
 
  def initialize(nombre,proteina,glucido,lipido,tipo)
@@ -120,18 +120,14 @@ super(tipo)
   
 def valor_energetico
     
-   ( @prt * 4) + (@gl * 4) +(@lp * 9)
+    @valor_energ= ( @prt * 4) + (@gl * 4) +(@lp * 9)
     
 end
 
 
 def <=>(other)
 
-    #return nil unless other.instance_of? Point
 
-   # @prt <=> other.gl
-    #@gl <=> other.gl
-  #  @lp <=> other.lp
     @valor_energ=other.valor_energ
     
   end
